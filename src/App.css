@@ -11,12 +11,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
-  padding: 0px;
+  min-height: 10vh;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .content {
   text-align: center;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding-left: 350px;
@@ -28,7 +30,6 @@ body {
   margin-bottom: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   animation: pulse 2s infinite;
-  display: flex;
 }
 
 .buttons {
@@ -117,18 +118,107 @@ button {
   }
 }
 
+/* Diseño responsivo para móviles */
 @media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
   }
 
   .buttons {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
 
   button {
-    width: 200px;
+    width: 80%;
+    max-width: 250px;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+  }
+
+  .message,
+  .success-message {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    padding: 0 10px;
+  }
+
+  .success-message p {
+    margin: 8px 0;
+  }
+
+  .heart {
+    font-size: 1.2rem;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 320px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 12px 18px;
+    font-size: 1.1rem;
+  }
+
+  .message,
+  .success-message {
+    font-size: 1.1rem;
+  }
+}
+
+/* Ajustes para pantallas medianas */
+@media (min-width: 481px) and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    gap: 15px;
+  }
+
+  button {
+    padding: 12px 20px;
+  }
+}
+
+/* Ajustes para orientación horizontal en móviles */
+@media (max-height: 480px) and (orientation: landscape) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+
+  .message,
+  .success-message {
+    font-size: 1.1rem;
+    margin-top: 1rem;
   }
 }
 
