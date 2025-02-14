@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffe4e6, #ffb6c1);
+  font-family: Arial, sans-serif;
+  margin-left: 100px;
+}
+
+.content {
+  text-align: center;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end; /* Mueve los botones a la derecha */
+  width: 100%; /* Para que ocupen todo el ancho */
+  margin-bottom: 1rem;
+  padding-right: 10rem; /* Espacio extra a la derecha */
+}
+
+
+.yesButton,
+.noButton {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.yesButton {
+  background-color: #22c55e;
+  color: white;
+}
+
+.yesButton:hover {
+  background-color: #16a34a;
+}
+
+.noButton {
+  background-color: #ef4444;
+  color: white;
+}
+
+.noButton:hover {
+  background-color: #dc2626;
+}
+
+.message {
+  font-size: 1.25rem;
+  color: #dc2626;
+  margin-top: 1rem;
+  margin-left: auto;
+}
+
+.successMessage {
+  font-size: 1.5rem;
+  color: #dc2626;
+  margin-top: 1rem;
+  margin-left: auto;
+}
+
+.hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  font-size: 1.5rem;
+}
+
